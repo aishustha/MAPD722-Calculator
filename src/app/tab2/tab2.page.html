@@ -1,17 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-buttons> 
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>About</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-content class="ion-padding">
+    <h5><span class="ion-label">Full Name:</span> <span class="ion-name"> Aishwarya Shrestha</span></h5>
+    <h5><span class="ion-label">Student ID:</span> <span class="ion-name"> 301138662</span></h5>
+  </ion-content>
 </ion-content>
