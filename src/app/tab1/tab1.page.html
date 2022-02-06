@@ -1,57 +1,59 @@
 
  <ion-content class="ion-padding">
+   <!-- title -->
   <ion-header [translucent]="true" collapse="condense" class="ion-margin-top-btm">
     <ion-toolbar>
       <ion-title size="large" class="ion-title">Pay Calculator</ion-title>
     </ion-toolbar>
   </ion-header>
 
- 
+    <!--ngModel -- ngModel is a directive which binds input, select and textarea, 
+      and stores the required user value in a variable and we can 
+      use that variable whenever we require that value.  -->
+    
+    <!-- input -->
     <ion-item-group>
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Number of Hours:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="tel" maxlength="2"></ion-input>
+        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "noOfHours"></ion-input>
       </ion-item>
 
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Hourly Rate:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="tel" maxlength="2"></ion-input>
+        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "hourlyRate"></ion-input>
       </ion-item>
     </ion-item-group>
 
-    <ion-button class="ion-width" color="#9dc183">Calculate</ion-button>
+    <!-- button -->
+    <ion-button class="ion-width" color="#9dc183" (click) = "payCalculate()">Calculate</ion-button>
 
+
+    <!-- output -->
 
     <ion-item-group>
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Regular Pay:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="number"></ion-input>
+        <ion-label class="ion-input-bgcolor">${{ regularPay }}</ion-label>
       </ion-item>
 
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Overtime Pay:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="number"></ion-input>
+        <ion-label class="ion-input-bgcolor">${{ overtimePay }}</ion-label>
       </ion-item>
 
         <ion-item class="ion-flex" lines="none">
           <ion-label class="ion-label-color">Total Pay:</ion-label>
-          <ion-input class="ion-input-bgcolor" type="number"></ion-input>
+          <ion-label class="ion-input-bgcolor">${{ totalPay }}</ion-label>
         </ion-item>
   
         <ion-item class="ion-flex" lines="none">
           <ion-label class="ion-label-color">Tax:</ion-label>
-          <ion-input class="ion-input-bgcolor" type="number"></ion-input>
+          <ion-label class="ion-input-bgcolor">${{ tax }}</ion-label>
         </ion-item>
-
-        <ion-item class="ion-flex" lines="none">
-          <ion-label class="ion-label-color">Tax:</ion-label>
-          <ion-input class="ion-input-bgcolor" type="number"></ion-input>
-        </ion-item>
-
           
         <ion-item class="ion-flex" lines="none">
           <ion-label class="ion-label-color">Net Income:</ion-label>
-          <ion-input class="ion-input-bgcolor" type="number"></ion-input>
+          <ion-label class="ion-input-bgcolor">${{ netIncome }}</ion-label>
         </ion-item>
       </ion-item-group>
 </ion-content>
