@@ -15,12 +15,12 @@
     <ion-item-group>
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Number of Hours:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "noOfHours"></ion-input>
+        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "noOfHours" placeholder="00"></ion-input>
       </ion-item>
 
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Hourly Rate:</ion-label>
-        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "hourlyRate"></ion-input>
+        <ion-input class="ion-input-bgcolor" type="number" [(ngModel)] = "hourlyRate" placeholder="00.00"></ion-input>
       </ion-item>
     </ion-item-group>
 
@@ -30,7 +30,7 @@
 
     <!-- output -->
 
-    <ion-item-group>
+    <ion-item-group class="ion-margin-right-zero">
       <ion-item class="ion-flex" lines="none">
         <ion-label class="ion-label-color">Regular Pay:</ion-label>
         <ion-label class="ion-input-bgcolor">${{ regularPay }}</ion-label>
